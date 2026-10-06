@@ -13,10 +13,10 @@ public:
         int n = nums.size();
 
         k = k % n;                           //avoids unnecessay rotations
-        int temp = nums[n - 1];              
-
+        
         for (int j = 0; j < k; j++)
         {
+            int temp = nums[n - 1];              
 
             for (int i = n - 1; i > 0; i--)
             {
