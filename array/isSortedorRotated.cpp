@@ -9,16 +9,46 @@
 #include <vector>
 using namespace std;
 
-class solution
-{
+// class solution
+// {
 
-public:
-    bool check(vector<int> &nums)
+// public:
+//     bool check(vector<int> &nums)
+//     {
+
+//         int count = 0;
+
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+
+//             if (nums[i] > nums[(i + 1) % nums.size()])
+//             {
+//                 count++;
+//             }
+//         }
+//         if (count > 1)
+//         {
+
+//             return false;
+//         }
+//         return true;
+//     }
+// };
+
+    int main()
     {
+        int count;
+        int n;
+        cout << "Enter size of an array: ";
+        cin >> n;
 
-        int count = 0;
-
-        for (int i = 0; i < nums.size(); i++)
+        vector<int> nums(n);
+        
+        for (int i = 0; i < n; i++)
+        {
+                cin >> nums[i];
+            }
+             for (int i = 0; i < nums.size(); i++)
         {
 
             if (nums[i] > nums[(i + 1) % nums.size()])
@@ -29,34 +59,23 @@ public:
         if (count > 1)
         {
 
-            return false;
+           cout<<"false";
         }
-        return true;
-    }
-};
+        else{
 
-    int main()
-    {
-        // int n;
-        // cout << "Enter size of an array: ";
-        // cin >> n;
-
-        // vector<int> nums(n);
+        cout<<"true";
         
-        // for (int i = 0; i < n; i++)
-        // {
-            //     cin >> nums[i];
-            // }
+        }
             
-            solution s;
+//             solution s;
 
-        vector<int> a = {3, 4, 5, 1, 2}; //true
-        vector<int> b = {2, 1, 3, 4};    //false
-        vector<int> c = {1, 2, 3, 4, 5};  //true
+//         vector<int> a = {3, 4, 5, 1, 2}; //true
+//         vector<int> b = {2, 1, 3, 4};    //false
+//         vector<int> c = {1, 2, 3, 4, 5};  //true
 
-        cout << s.check(a)<<endl;
-        cout << s.check(b)<<endl;
-        cout << s.check(c)<<endl;
+//         cout << s.check(a)<<endl;
+//         cout << s.check(b)<<endl;
+//         cout << s.check(c)<<endl;
 
         return 0;
     }
